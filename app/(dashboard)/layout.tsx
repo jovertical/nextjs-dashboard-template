@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import {
   Home,
   LineChart,
@@ -7,8 +6,10 @@ import {
   PanelLeft,
   Settings,
   ShoppingCart,
-  Users2
-} from 'lucide-react';
+  Users2,
+} from 'lucide-react'
+import { Analytics } from '@vercel/analytics/react'
+import Link from 'next/link'
 
 import {
   Breadcrumb,
@@ -16,26 +17,26 @@ import {
   BreadcrumbLink,
   BreadcrumbList,
   BreadcrumbPage,
-  BreadcrumbSeparator
-} from '@/components/ui/breadcrumb';
-import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+  BreadcrumbSeparator,
+} from '@/components/ui/breadcrumb'
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import {
   Tooltip,
   TooltipContent,
-  TooltipTrigger
-} from '@/components/ui/tooltip';
-import { Analytics } from '@vercel/analytics/react';
-import { User } from './user';
-import { VercelLogo } from '@/components/icons';
-import Providers from './providers';
-import { NavItem } from './nav-item';
-import { SearchInput } from './search';
+  TooltipTrigger,
+} from '@/components/ui/tooltip'
+import { Button } from '@/components/ui/button'
+import { VercelLogo } from '@/components/icons'
+
+import { NavItem } from './nav-item'
+import Providers from './providers'
+import { SearchInput } from './search'
+import { User } from './user'
 
 export default function DashboardLayout({
-  children
+  children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
     <Providers>
@@ -55,7 +56,7 @@ export default function DashboardLayout({
         <Analytics />
       </main>
     </Providers>
-  );
+  )
 }
 
 function DesktopNav() {
@@ -105,7 +106,7 @@ function DesktopNav() {
         </Tooltip>
       </nav>
     </aside>
-  );
+  )
 }
 
 function MobileNav() {
@@ -164,7 +165,7 @@ function MobileNav() {
         </nav>
       </SheetContent>
     </Sheet>
-  );
+  )
 }
 
 function DashboardBreadcrumb() {
@@ -188,5 +189,5 @@ function DashboardBreadcrumb() {
         </BreadcrumbItem>
       </BreadcrumbList>
     </Breadcrumb>
-  );
+  )
 }

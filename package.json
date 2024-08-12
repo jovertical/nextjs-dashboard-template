@@ -4,7 +4,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "format": "prettier . --write",
+    "test:format": "prettier --check .",
+    "test:types": "tsc --noEmit",
+    "test:lint": "next lint",
+    "test": "npm run test:format && npm run test:types && npm run test:lint"
   },
   "dependencies": {
     "@neondatabase/serverless": "^0.9.4",
@@ -23,6 +27,10 @@
     "drizzle-kit": "^0.22.8",
     "drizzle-orm": "^0.31.2",
     "drizzle-zod": "^0.5.1",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^14.2.5",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
     "lucide-react": "^0.400.0",
     "next": "15.0.0-canary.75",
     "next-auth": "5.0.0-beta.19",
@@ -35,13 +43,7 @@
     "tailwind-merge": "^2.3.0",
     "tailwindcss": "^3.4.4",
     "tailwindcss-animate": "^1.0.7",
-    "typescript": "5.5.3",
+    "typescript": "5.4.2",
     "zod": "^3.23.8"
-  },
-  "prettier": {
-    "arrowParens": "always",
-    "singleQuote": true,
-    "tabWidth": 2,
-    "trailingComma": "none"
   }
 }

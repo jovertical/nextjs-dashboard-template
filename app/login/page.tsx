@@ -1,12 +1,12 @@
-import { Button } from '@/components/ui/button';
 import {
   Card,
   CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle
-} from '@/components/ui/card';
-import { signIn } from '@/lib/auth';
+  CardTitle,
+} from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+import { signIn } from '@/lib/auth'
 
 export default function LoginPage() {
   return (
@@ -21,10 +21,10 @@ export default function LoginPage() {
         <CardFooter>
           <form
             action={async () => {
-              'use server';
+              'use server'
               await signIn('github', {
-                redirectTo: '/'
-              });
+                redirectTo: '/',
+              })
             }}
             className="w-full"
           >
@@ -33,5 +33,5 @@ export default function LoginPage() {
         </CardFooter>
       </Card>
     </div>
-  );
+  )
 }

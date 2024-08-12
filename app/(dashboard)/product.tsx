@@ -1,17 +1,19 @@
-import Image from 'next/image';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
+import Image from 'next/image'
+import { MoreHorizontal } from 'lucide-react'
+
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuLabel,
-  DropdownMenuTrigger
-} from '@/components/ui/dropdown-menu';
-import { MoreHorizontal } from 'lucide-react';
-import { TableCell, TableRow } from '@/components/ui/table';
-import { SelectProduct } from '@/lib/db';
-import { deleteProduct } from './actions';
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu'
+import { TableCell, TableRow } from '@/components/ui/table'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { SelectProduct } from '@/lib/db'
+
+import { deleteProduct } from './actions'
 
 export function Product({ product }: { product: SelectProduct }) {
   return (
@@ -56,5 +58,5 @@ export function Product({ product }: { product: SelectProduct }) {
         </DropdownMenu>
       </TableCell>
     </TableRow>
-  );
+  )
 }
